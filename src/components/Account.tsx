@@ -8,6 +8,7 @@ type Props = {
   name: string;
   balance: number;
   operations: OperationItem[];
+  selected: string | null;
 };
 
 export function Account({
@@ -15,6 +16,7 @@ export function Account({
   name,
   balance,
   operations,
+  selected,
 }: Props): JSX.Element {
   return (
     <div className="Account">
@@ -32,6 +34,7 @@ export function Account({
             date={operation.date}
             description={operation.description}
             amount={operation.amount}
+            selected={operation.id === selected}
           />
         ))}
       </div>

@@ -19,6 +19,7 @@ export type AccountItem = {
 export type Data = {
   userName: string;
   accounts: AccountItem[];
+  selectedOperation: string | null;
 };
 
 export function App() {
@@ -90,12 +91,13 @@ export function App() {
         ],
       },
     ],
+    selectedOperation: "2-002",
   };
 
   return (
     <div>
       <Header userName={data.userName} />
-      <Accounts accounts={data.accounts} />
+      <Accounts accounts={data.accounts} selected={data.selectedOperation} />
     </div>
   );
 }

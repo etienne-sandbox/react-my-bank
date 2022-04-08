@@ -3,9 +3,10 @@ import type { AccountItem } from "./App";
 
 type Props = {
   accounts: AccountItem[];
+  selected: string | null;
 };
 
-export function Accounts({ accounts }: Props): JSX.Element {
+export function Accounts({ accounts, selected }: Props): JSX.Element {
   return (
     <div className="Accounts">
       {accounts.map((account) => (
@@ -15,6 +16,7 @@ export function Accounts({ accounts }: Props): JSX.Element {
           name={account.name}
           balance={account.balance}
           operations={account.operations}
+          selected={selected}
         />
       ))}
     </div>

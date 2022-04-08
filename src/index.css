@@ -122,10 +122,19 @@ code {
   background: #f7f7f7;
 }
 
+.Operation.Operation--selected {
+  background: #263238;
+  color: white;
+}
+
 .Operation--date {
   color: #455a64;
   font-size: 0.8rem;
   padding: 0.5rem 1rem;
+}
+
+.Operation--selected .Operation--date {
+  color: #a9bbc4;
 }
 
 .Operation--description {
