@@ -1,12 +1,6 @@
 import { Account } from "./Account";
-import type { AccountItem } from "./App";
 
-type Props = {
-  accounts: AccountItem[];
-  selected: string | null;
-};
-
-export function Accounts({ accounts, selected }: Props): JSX.Element {
+export function Accounts({ accounts, selected }) {
   return (
     <div className="Accounts">
       {accounts.map((account) => (

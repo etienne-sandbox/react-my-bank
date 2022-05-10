@@ -5,10 +5,6 @@ const formatter = new Intl.NumberFormat("fr-FR", {
   maximumFractionDigits: 2,
 });
 
-type Props = {
-  amount: number;
-};
-
-export function Amount({ amount }: Props): JSX.Element {
+export function Amount({ amount }) {
   return <Fragment>{formatter.format(amount)}</Fragment>;
 }

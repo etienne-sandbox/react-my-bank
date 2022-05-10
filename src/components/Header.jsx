@@ -1,10 +1,6 @@
 import { User } from "./User";
 
-type Props = {
-  userName: string;
-};
-
-export function Header({ userName }: Props): JSX.Element {
+export function Header({ userName }) {
   return (
     <header className="Header">
       <div className="Header--center">

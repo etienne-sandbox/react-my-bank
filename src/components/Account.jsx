@@ -1,23 +1,8 @@
 import { Operation } from "./Operation";
 import { Button } from "./Button";
 import { Amount } from "./Amount";
-import type { OperationItem } from "./App";
 
-type Props = {
-  color: string;
-  name: string;
-  balance: number;
-  operations: OperationItem[];
-  selected: string | null;
-};
-
-export function Account({
-  color,
-  name,
-  balance,
-  operations,
-  selected,
-}: Props): JSX.Element {
+export function Account({ color, name, balance, operations, selected }) {
   return (
     <div className="Account">
       <div className="Account--header" style={{ background: color }}>

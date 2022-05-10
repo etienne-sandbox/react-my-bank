@@ -1,29 +1,8 @@
 import { Header } from "./Header";
 import { Accounts } from "./Accounts";
 
-export type OperationItem = {
-  id: string;
-  date: string;
-  description: string;
-  amount: number;
-};
-
-export type AccountItem = {
-  id: string;
-  name: string;
-  balance: number;
-  color: string;
-  operations: OperationItem[];
-};
-
-export type Data = {
-  userName: string;
-  accounts: AccountItem[];
-  selectedOperation: string | null;
-};
-
 export function App() {
-  const data: Data = {
+  const data = {
     userName: "Etienne",
     accounts: [
       {
